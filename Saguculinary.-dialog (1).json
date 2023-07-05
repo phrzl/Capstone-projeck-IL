@@ -1,0 +1,744 @@
+{
+  "intents": [
+    {
+      "intent": "beranda",
+      "examples": [
+        {
+          "text": "assalamualaikum"
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "haii"
+        },
+        {
+          "text": "hallo"
+        },
+        {
+          "text": "halo"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "info"
+        },
+        {
+          "text": "p"
+        },
+        {
+          "text": "selamat malam"
+        },
+        {
+          "text": "selamat pagi"
+        },
+        {
+          "text": "selamat siap"
+        },
+        {
+          "text": "selamat sore"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "harga",
+      "examples": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "berapa harga bubur lambok",
+          "mentions": [
+            {
+              "entity": "harga",
+              "location": [
+                13,
+                25
+              ]
+            }
+          ]
+        },
+        {
+          "text": "berapa harganya bubur lambok"
+        },
+        {
+          "text": "berpa harga kerupuk sagu lenggang",
+          "mentions": [
+            {
+              "entity": "harga",
+              "location": [
+                12,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "text": "harganya berapa"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "kontakkami",
+      "examples": [
+        {
+          "text": "5"
+        },
+        {
+          "text": "halaman"
+        },
+        {
+          "text": "hubungi"
+        },
+        {
+          "text": "kontak"
+        },
+        {
+          "text": "web"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Lokasi",
+      "examples": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "alamat"
+        },
+        {
+          "text": "dimana"
+        },
+        {
+          "text": "Lokasi"
+        },
+        {
+          "text": "tempat"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "menu",
+      "examples": [
+        {
+          "text": "2"
+        },
+        {
+          "text": "Bubur Lambok"
+        },
+        {
+          "text": "Gubal Sagu"
+        },
+        {
+          "text": "Kepurun"
+        },
+        {
+          "text": "Kerupuk Sagu Lenggang"
+        },
+        {
+          "text": "Kue bangkit"
+        },
+        {
+          "text": "kuliner"
+        },
+        {
+          "text": "lendot"
+        },
+        {
+          "text": "makanan"
+        },
+        {
+          "text": "makanan khas"
+        },
+        {
+          "text": "menu"
+        },
+        {
+          "text": "sagu"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "tentangkami",
+      "examples": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "kami"
+        },
+        {
+          "text": "tentang"
+        },
+        {
+          "text": "tentang kami"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "harga",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bubur lambok",
+          "synonyms": [
+            "Bubur Lambok"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "gubal sagu",
+          "synonyms": [
+            "gobalsagu"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Kepurun",
+          "synonyms": [
+            "keporon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Kerupuk Sagu Lenggang",
+          "synonyms": [
+            "kerupuk sagu lenggang"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "lendot",
+          "synonyms": [
+            "Lendot"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "menu",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bubur lambok",
+          "synonyms": [
+            "Bubur Lambok",
+            "bubur lambuk"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "gubal sagu",
+          "synonyms": [
+            "gubal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "kepurun",
+          "synonyms": [
+            "kepuron"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "kerupuk sagu lenggang",
+          "synonyms": [
+            "keripik sagu lenggang"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "lendot",
+          "synonyms": [
+            "lendut"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1688398831505",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "beranda ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hallo. Selamat datang di Sagu Culinery dan Terimakasih. \nDisini Sagu Culinery membahas tentang kuliner Khas kabupaten lingga yaitu dengan bahan sagu \nberikut beberapa yang bisa dibantu:\n1. Tentang kami\n2. Menu \n3. Harga\n4. Lokasi\n5. Kontak"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#beranda",
+      "dialog_node": "node_10_1688397112709",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Tentang kami",
+      "output": {
+        "generic": [
+          {
+            "source": "https://resun-lingga.desa.id/wp-content/uploads/2021/12/gubal-sagu-1.jpg",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Kuliner dari pohon sagu di Kabupaten Lingga menawarkan keunikan dan kelezatan yang mencerminkan kekayaan alam daerah tersebut. Kabupaten Lingga, yang terletak di Provinsi Kepulauan Riau, Indonesia, memiliki tradisi kuliner yang khas dengan menggunakan sagu sebagai bahan utama dalam beberapa hidangan tradisional.Kuliner dari pohon sagu Kabupaten Lingga menggabungkan cita rasa tradisional dengan keanekaragaman alam setempat. Kelezatan hidangan-hidangan ini mencerminkan keunikan budaya kuliner Kabupaten Lingga dan kekayaan alam yang melimpah dengan pohon sagu. Jika Anda berkunjung ke Kabupaten Lingga, mencoba kuliner dari pohon sagu adalah cara yang sempurna untuk menikmati keunikan kuliner setempat dan merasakan kelezatan tradisional yang memikat lidah."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#tentangkami",
+      "dialog_node": "node_10_1688397268539",
+      "previous_sibling": "node_10_1688397112709"
+    },
+    {
+      "type": "standard",
+      "title": "Menu",
+      "output": {
+        "generic": [
+          {
+            "title": "Makanan Khas Kabupaten Lingga dari sagu",
+            "options": [
+              {
+                "label": "Gubal Sagu",
+                "value": {
+                  "input": {
+                    "text": "Gubal Sagu"
+                  }
+                }
+              },
+              {
+                "label": "Lendot",
+                "value": {
+                  "input": {
+                    "text": "Lendot"
+                  }
+                }
+              },
+              {
+                "label": "Kerupuk Sagu Lenggang",
+                "value": {
+                  "input": {
+                    "text": "Kerupuk Sagu Lenggang"
+                  }
+                }
+              },
+              {
+                "label": "Bubur Lambok",
+                "value": {
+                  "input": {
+                    "text": "Bubur Lambok"
+                  }
+                }
+              },
+              {
+                "label": "Kepurun",
+                "value": {
+                  "input": {
+                    "text": "Kepurun"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#menu",
+      "dialog_node": "node_10_1688397975663",
+      "previous_sibling": "node_10_1688397268539"
+    },
+    {
+      "type": "standard",
+      "title": "Harga",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Berikut harga makanan khas melayu\n1. harga bubur lambok\n2. harga kepurun\n3. harga gubal sagu\n4. harga lendot\n5. harga kerupuk sagu lenggang"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1688566680844"
+      },
+      "conditions": "#harga",
+      "dialog_node": "node_10_1688566660843",
+      "previous_sibling": "node_10_1688397975663"
+    },
+    {
+      "type": "standard",
+      "title": "Kerupuk Sagu Lenggang",
+      "output": {
+        "generic": [
+          {
+            "title": "Kerupuk Sagu Lenggang",
+            "source": "https://resun-lingga.desa.id/wp-content/uploads/2021/12/kerupuk.jpg",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Gurih dan manis adalah kesan pertama yang dirasakan setiap orang yang menicicipi kerupuk sagu lenggang. Cemilan ringan ini memang dipercaya sebagai makanan khas masyarakat Melayu Kabupaten Lingga dan bukan dari daerah lainnya."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_10_1688397975663",
+      "conditions": "@menu:(kerupuk sagu lenggang)",
+      "dialog_node": "node_1_1688539879938",
+      "previous_sibling": "node_2_1688398982286"
+    },
+    {
+      "type": "standard",
+      "title": "Lendot",
+      "output": {
+        "generic": [
+          {
+            "title": "Lendot",
+            "source": "https://resun-lingga.desa.id/wp-content/uploads/2021/12/lendot.jpg",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Lendot adalah kuliner khas yang hampir mirip dengan bubur lambok,dari sayur kangkung dan daun pakis makanan laut seperti udang, siput isap, sotong, kepiting dan ikan. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688397975663",
+      "conditions": "@menu:lendot",
+      "dialog_node": "node_2_1688398982286",
+      "previous_sibling": "node_8_1688398373363"
+    },
+    {
+      "type": "standard",
+      "title": "Kepurun",
+      "output": {
+        "generic": [
+          {
+            "title": "Kepurun",
+            "source": "https://resun-lingga.desa.id/wp-content/uploads/2021/12/kepurun.jpg",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "kepurun diolah dari tepung sagu yang dimasak menggunakan air dengan api kecil. Setelah masak bentuknya seperti ongol-ongol. Teksturnya seperti jely, warnanya abu-abu dan tidak memiliki rasa."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688397975663",
+      "conditions": "@menu:kepurun",
+      "dialog_node": "node_2_1688539883692",
+      "previous_sibling": "node_1_1688539879938"
+    },
+    {
+      "type": "standard",
+      "title": "harga lendot",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "harga satu porsi dari Lendot adalah Rp. 15.000"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688566660843",
+      "conditions": "@harga:lendot",
+      "dialog_node": "node_2_1688568138503",
+      "previous_sibling": "node_3_1688566907939"
+    },
+    {
+      "type": "standard",
+      "title": "Bubur Lambok",
+      "output": {
+        "generic": [
+          {
+            "title": "Bubur Lambok",
+            "source": "https://resun-lingga.desa.id/wp-content/uploads/2021/12/bubur-lambok.jpg",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": " Bubur ini terbuat dari sagu yang dimasak bersama ikan teri dan sayur-sayuran. Ada daun cekor, selasih, kangkung, cekor manis, daun kunyit, daun kacang, daun paku, dan sebagainya. Ciri khas bubur lambok adalah rasa pedas. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688397975663",
+      "conditions": "@menu:(bubur lambok)",
+      "dialog_node": "node_3_1688539885600",
+      "previous_sibling": "node_2_1688539883692"
+    },
+    {
+      "type": "standard",
+      "title": "gubal sagu",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "harga satu porsi dari Gubal sagu adalah Rp. 15.000"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688566660843",
+      "conditions": "@harga:(gubal sagu)",
+      "dialog_node": "node_3_1688566907939",
+      "previous_sibling": "node_5_1688566868546"
+    },
+    {
+      "type": "standard",
+      "title": "harga Kerupuk Sagu Lenggang",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "harga Rp.8.000/ bungkus netto : -+ 80 gram / bungkus"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688566660843",
+      "conditions": "@harga:(Kerupuk Sagu Lenggang)",
+      "dialog_node": "node_3_1688568142592",
+      "previous_sibling": "node_2_1688568138503"
+    },
+    {
+      "type": "standard",
+      "title": "harga bubur lambok",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "harga satu porsi dari bubur lambok adalah Rp. 15.000"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688566660843",
+      "conditions": "@harga:(bubur lambok)",
+      "user_label": "harga satu porsi ",
+      "dialog_node": "node_4_1688566680844"
+    },
+    {
+      "type": "standard",
+      "title": "Lokasi ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Lingga adalah sebuah wilayah kabupaten di provinsi Kepulauan Riau, Indonesia. Ibu kotanya adalah Daik. Kabupaten Lingga memiliki 13 kecamatan, 7 kelurahan, dan 82 desa, dengan jumlah penduduk 98.633 jiwa. Bupati dan Wakil Bupati Kabupaten Lingga saat ini adalah M. Nizar dan Neko Wesha Pawelloy"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://th.bing.com/th/id/OIP.T4TeLAh9b2Jr6R2uvPqO4AHaHb?w=166&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "#Lokasi",
+      "dialog_node": "node_5_1688398385357",
+      "previous_sibling": "node_10_1688566660843"
+    },
+    {
+      "type": "standard",
+      "title": "harga kepurun",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "harga satu porsi dari Kepurun adalah Rp. 12.000"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688566660843",
+      "conditions": "@harga:(kepurun)",
+      "dialog_node": "node_5_1688566868546",
+      "previous_sibling": "node_4_1688566680844"
+    },
+    {
+      "type": "standard",
+      "title": "kontak kami",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tim kami tersedia untuk membantu Anda dengan segala hal yang berhubungan dengan produk, layanan, atau informasi yang kami sediakan. Kami berkomitmen untuk memberikan pelayanan pelanggan terbaik dan merespon pertanyaan Anda dalam waktu sesingkat mungkin.\nJika Anda memiliki pertanyaan tentang pembelian produk, pengiriman, atau masalah terkait layanan kami, jangan ragu untuk menghubungi kami melalui telepon atau email. \nJalan Istana Robat – Daik Lingga Kode Pos : 29872\n08127609445"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#kontakkami",
+      "dialog_node": "node_7_1688398831505",
+      "previous_sibling": "node_5_1688398385357"
+    },
+    {
+      "type": "standard",
+      "title": "gubal sagu",
+      "output": {
+        "generic": [
+          {
+            "title": "Gubal Sagu",
+            "source": "https://resun-lingga.desa.id/wp-content/uploads/2021/12/gubal-sagu.jpg",
+            "description": "",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Gubal adalah makan khas Melayu Kepulauan Riau khususnya di daerah Dabo Singkep dan Daik Lingga. Kuliner ini terbuat dari sagu basah dan dimakan bersama gulai ikan. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1688397975663",
+      "conditions": "@menu:(gubal sagu)",
+      "dialog_node": "node_8_1688398373363"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "apakah ada yang bisa saya bantu ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "language": "en",
+  "description": "created for assistant 59fdfc7f-e188-478b-af73-aca093c93901",
+  "name": "Saguculinary.-dialog"
+}
