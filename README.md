@@ -16,7 +16,15 @@ Flow
 1. Masuk ke akun IBM Cloud
 2. Menggunakan watson Assisten 
 4. Menggunakan twilio untuk memasukan URL Webhook ke WhatsApp with Twilio
-5. 
+5. Masuk ke Twillio dan masukan URL ke Sandbox Configuration
+----------------------------------------
+Komponen 
+----------------------------------------
+
+- https://www.ibm.com/products/watson-assistant : Buat, uji, dan gunakan bot atau agen virtual di seluruh perangkat seluler, informasi, atau bahkan di robot fisik.
+
+
+
 
 
 
