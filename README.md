@@ -1,4 +1,4 @@
-# Capstone-projeck-IL
+# SaguCulinary: Pengembangan Aplikasi Chatbot menggunakan Watson Assistant untuk memberikan informasi tentang makanan khas melayu dari sagu dikabupaten lingga
 
 ------------------------------
 Pahrizal-Universitas maritim raja ali haji-
