@@ -25,7 +25,7 @@ Komponen
 - https://console.twilio.com/ : Konfigurasi URL Webhook WhatsApp ke dalam Twilio untuk memungkinkan pesan dikirim dan diterima melalui WhatsApp.
 
 ----------------------------------------
-Impelenetasi 
+Implementasi
 ----------------------------------------
 Buka Dialog, dan kita akan melihat:
 
